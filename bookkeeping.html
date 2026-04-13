@@ -1,16 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=AW-18085429312"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-YOUR_ID_HERE"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
 
-  gtag('config', 'AW-18085429312');
-</script>
-
+      gtag('config', 'AW-YOUR_ID_HERE');
+    </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>EverettBlayne Accounting | Bookkeeping Services</title>
@@ -92,6 +90,7 @@
             gap: 2rem;
             flex-wrap: wrap;
             margin-top: 2rem;
+            align-items: stretch;
         }
         .pricing-card {
             flex: 1;
@@ -103,6 +102,8 @@
             border-radius: 8px;
             box-shadow: 0 4px 10px rgba(0,0,0,0.04);
             transition: transform 0.3s ease;
+            display: flex;
+            flex-direction: column;
         }
         .pricing-card:hover {
             transform: translateY(-5px);
@@ -117,21 +118,43 @@
             font-size: 1.8rem;
             font-weight: bold;
             color: #7a203e; 
-            margin-bottom: 0.5rem;
+            margin-bottom: 0.2rem;
         }
         .price-subtext {
             font-size: 0.9rem;
             color: #666;
             margin-bottom: 1.5rem;
             display: block;
+            font-weight: bold;
         }
         .pricing-card ul {
             padding-left: 1.5rem;
-            margin-bottom: 2rem;
+            margin-bottom: 1.5rem;
             color: #555;
+            flex-grow: 1;
         }
         .pricing-card li {
             margin-bottom: 0.5rem;
+        }
+
+        /* Add-on Box Styling */
+        .addon-box {
+            background: #f8f6f7;
+            padding: 1.2rem;
+            border-radius: 4px;
+            border-left: 4px solid #7a203e;
+            margin-bottom: 1.5rem;
+        }
+        .addon-box h4 {
+            margin-top: 0;
+            margin-bottom: 0.5rem;
+            color: #51484f;
+            font-size: 1.05rem;
+        }
+        .addon-box ul {
+            margin-bottom: 0;
+            padding-left: 1.2rem;
+            font-size: 0.95rem;
         }
 
         /* Call to Action Section */
@@ -180,28 +203,38 @@
     <div class="container">
         
         <div class="pricing-grid">
+            
             <div class="pricing-card">
                 <h3>The Starter Package</h3>
                 <div class="price">$50 / Hour</div>
-                <span class="price-subtext">2-hour monthly minimum required</span>
-                <p>Perfect for early-stage businesses or individuals needing basic compliance, clean-up, and "lite" monthly maintenance.</p>
+                <span class="price-subtext">2-hour monthly minimum ($100/mo)</span>
+                <p>Perfect for early-stage businesses needing basic compliance and "lite" monthly maintenance. <strong>Includes up to 2 financial accounts.</strong></p>
                 <ul>
                     <li>Monthly categorization of bank and credit card transactions</li>
                     <li>Reconciliation of up to two accounts per month</li>
-                    <li>Delivery of standard monthly financial statements (Balance Sheet & Income Statement)</li>
+                    <li>Delivery of standard monthly financial statements (Balance Sheet & P&L)</li>
                 </ul>
+                
+                <div class="addon-box">
+                    <h4>A La Carte Add-Ons:</h4>
+                    <ul>
+                        <li>Additional Bank/Credit Accounts: <strong>+$25/mo per account</strong></li>
+                        <li>Accounts Payable/Receivable Processing: <strong>+$50/mo</strong></li>
+                    </ul>
+                </div>
             </div>
 
             <div class="pricing-card" style="border-top-color: #51484f;">
-                <h3>The Set Hours Package</h3>
-                <div class="price">$1,000 / Month</div>
-                <span class="price-subtext">Up to 20 dedicated hours per month</span>
-                <p>Comprehensive monthly support for businesses needing heavier lifting, cost accounting, and strategic oversight.</p>
+                <h3>The Outsourced Controller</h3>
+                <div class="price">Starting at $500 / mo</div>
+                <span class="price-subtext">Custom quoted based on operational volume</span>
+                <p>Comprehensive, flat-fee monthly support for growing businesses. Stop paying by the hour and get a dedicated financial partner.</p>
                 <ul>
-                    <li>Accounts Payable & Receivable processing</li>
-                    <li>Job order costing, accruals, and advanced reporting</li>
-                    <li>Custom workflow automation to reduce data entry errors</li>
+                    <li><strong>Unlimited</strong> financial accounts</li>
+                    <li>Custom workflow automation (VBA/Python) to reduce data entry errors</li>
+                    <li>Job order costing, accruals, and advanced management reporting</li>
                     <li>Priority email and phone support during business hours</li>
+                    <li>Proactive cash flow forecasting</li>
                 </ul>
             </div>
         </div>

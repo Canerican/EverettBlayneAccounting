@@ -70,28 +70,28 @@
             margin-bottom: 3rem;
         }
 
+        /* Updated to stack cards vertically and center them */
         .services-grid {
             display: flex;
-            gap: 2rem;
-            flex-wrap: wrap;
-            justify-content: center;
+            flex-direction: column;
+            align-items: center;
+            gap: 2.5rem;
         }
         
-        /* Service Cards */
+        /* Service Cards - Made much wider */
         .service-card {
-            flex: 1;
-            min-width: 300px;
-            max-width: 350px;
+            width: 100%;
+            max-width: 800px;
             background: #ffffff;
             border: 1px solid #e0e0e0;
             border-top: 5px solid #8b8589; /* Muted Mauve accent */
-            padding: 2.5rem 2rem;
+            padding: 3rem 2rem;
             border-radius: 8px;
             text-align: center;
             box-shadow: 0 4px 10px rgba(0,0,0,0.04);
             transition: transform 0.3s ease, border-color 0.3s ease;
-            text-decoration: none; /* Removes underline from links */
-            color: inherit; /* Keeps text color normal even though it's a link */
+            text-decoration: none; 
+            color: inherit; 
             display: flex;
             flex-direction: column;
         }
@@ -104,13 +104,15 @@
 
         .service-card h3 {
             color: #51484f;
-            font-size: 1.6rem;
+            font-size: 1.8rem;
             margin-top: 0;
+            margin-bottom: 1rem;
         }
         
         .service-card p {
             color: #666;
             margin-bottom: 2rem;
+            font-size: 1.1rem;
             flex-grow: 1;
         }
 
@@ -118,7 +120,7 @@
             color: #7a203e;
             font-weight: bold;
             text-transform: uppercase;
-            font-size: 0.9rem;
+            font-size: 0.95rem;
             letter-spacing: 1px;
         }
 
@@ -137,7 +139,7 @@
     <header>
         <div class="container">
             <h1>EverettBlayne Accounting</h1>
-            <p>Providing precision bookkeeping, tax strategy, and financial consulting to help your business operate efficiently and scale confidently.</p>
+            <p>Providing precision bookkeeping, payroll management, and financial consulting to help your business operate efficiently and scale confidently.</p>
             <a href="#services" class="cta-button">Explore Our Services</a>
         </div>
     </header>
@@ -153,13 +155,13 @@
                 <span class="card-link-text">View Pricing & Plans &rarr;</span>
             </a>
 
-            <a href="taxes.html" class="service-card">
-                <h3>Tax Services</h3>
-                <p>Strategic tax planning and preparation designed to minimize liability and keep you compliant with all current regulations.</p>
+            <a href="payroll.html" class="service-card" style="border-top-color: #51484f;">
+                <h3>Payroll Services</h3>
+                <p>Ensure your team is paid accurately and on time with flawless compliance. Setup and processing are handled with advanced expertise in QuickBooks Online payroll and banking modules, guaranteeing seamless tax withholdings and direct deposits.</p>
                 <span class="card-link-text">Learn More &rarr;</span>
             </a>
 
-            <a href="consultations.html" class="service-card">
+            <a href="consultations.html" class="service-card" style="border-top-color: #7a203e;">
                 <h3>Consultations</h3>
                 <p>Deep-dive advisory sessions focusing on cost accounting, job order setups, and database workflow efficiency.</p>
                 <span class="card-link-text">Book a Session &rarr;</span>

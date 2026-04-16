@@ -2,186 +2,325 @@
 <html lang="en">
 <head>
     <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=AW-18085429312">
-</script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'AW-18085429312');
-</script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-18085429312"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'AW-18085429312');
+    </script>
+    
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>EverettBlayne Accounting | Home</title>
+    <title>EverettBlayne Accounting | Premium Financial Services</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;600;800&display=swap" rel="stylesheet">
+    
     <style>
-        /* Base Colors: 
-           Dark Grey/Plum: #51484f
-           Deep Maroon: #7a203e
-           Bright Maroon: #96254a
-           Muted Mauve/Grey: #8b8589 
-        */
+        :root {
+            /* Color Palette */
+            --bg-charcoal: #121013;
+            --bg-gradient-top: #291e23;
+            
+            --card-bg: rgba(33, 30, 36, 0.6);
+            --card-border: rgba(255, 255, 255, 0.08);
+            
+            --accent-maroon: #7a203e;
+            --accent-ruby: #ab254f;
+            --accent-plum: #51484f;
+            
+            --text-primary: #f8f8f8;
+            --text-secondary: #aba4a8;
+            --text-muted: #746d71;
+            
+            --font-display: 'Outfit', sans-serif;
+            --font-body: 'Inter', sans-serif;
+        }
 
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            line-height: 1.6;
+        * {
+            box-sizing: border-box;
             margin: 0;
             padding: 0;
-            color: #333;
-            background-color: #fbfbfb;
         }
+
+        body {
+            font-family: var(--font-body);
+            background: var(--bg-charcoal);
+            background-image: radial-gradient(ellipse at 50% 0%, var(--bg-gradient-top) 0%, var(--bg-charcoal) 80%);
+            color: var(--text-primary);
+            line-height: 1.6;
+            min-height: 100vh;
+            -webkit-font-smoothing: antialiased;
+        }
+
         .container {
-            max-width: 1100px;
-            margin: auto;
-            padding: 2rem 1rem;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 5%;
+        }
+
+        /* --- Header / Hero --- */
+        .hero {
+            padding: 8rem 0 6rem 0;
+            text-align: center;
+            position: relative;
         }
         
-        /* Navigation / Header */
-        header {
-            background: #51484f; /* Dark Grey/Plum */
-            color: #ffffff;
-            padding: 4rem 1rem;
-            text-align: center;
-            border-bottom: 6px solid #7a203e; /* Deep Maroon accent */
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: -20%;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 600px;
+            height: 600px;
+            background: var(--accent-maroon);
+            filter: blur(150px);
+            opacity: 0.15;
+            z-index: -1;
         }
-        header h1 {
-            margin: 0;
-            font-size: 3rem;
-            letter-spacing: 1px;
+
+        .hero h1 {
+            font-family: var(--font-display);
+            font-size: clamp(2.5rem, 6vw, 4.5rem);
+            font-weight: 800;
+            letter-spacing: -0.02em;
+            margin-bottom: 1.5rem;
+            line-height: 1.1;
+            background: linear-gradient(to right, #fff, #ebaebc);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
         }
-        header p {
-            font-size: 1.2rem;
-            margin: 1rem auto 2rem;
+
+        .hero p {
+            font-size: clamp(1.1rem, 2vw, 1.25rem);
+            color: var(--text-secondary);
             max-width: 700px;
-            color: #e2e0e1;
-        }
-        
-        /* Buttons */
-        .cta-button {
-            display: inline-block;
-            background: #7a203e; /* Deep Maroon */
-            color: #ffffff;
-            padding: 0.85rem 2rem;
-            text-decoration: none;
-            border-radius: 4px;
-            font-weight: bold;
-            font-size: 1.1rem;
-            transition: background 0.3s ease;
-        }
-        .cta-button:hover {
-            background: #96254a; /* Bright Maroon on hover */
+            margin: 0 auto 3rem auto;
+            font-weight: 300;
         }
 
-        /* Services Hub Section */
-        .section-title {
-            text-align: center;
-            color: #51484f;
-            font-size: 2.2rem;
-            margin-bottom: 3rem;
-        }
-
-        /* Updated to stack cards vertically and center them */
-        .services-grid {
-            display: flex;
-            flex-direction: column;
+        .cta-btn {
+            display: inline-flex;
             align-items: center;
-            gap: 2.5rem;
+            justify-content: center;
+            padding: 1.1rem 2.5rem;
+            background: linear-gradient(135deg, var(--accent-ruby), var(--accent-maroon));
+            color: white;
+            font-family: var(--font-body);
+            font-weight: 600;
+            font-size: 1.1rem;
+            text-decoration: none;
+            border-radius: 50px;
+            box-shadow: 0 10px 25px rgba(122, 32, 62, 0.4);
+            transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+            border: 1px solid rgba(255,255,255,0.1);
         }
-        
-        /* Service Cards - Made much wider */
-        .service-card {
-            width: 100%;
-            max-width: 800px;
-            background: #ffffff;
-            border: 1px solid #e0e0e0;
-            border-top: 5px solid #8b8589; /* Muted Mauve accent */
-            padding: 3rem 2rem;
-            border-radius: 8px;
+
+        .cta-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 30px rgba(171, 37, 79, 0.5);
+            background: linear-gradient(135deg, #c32b5b, var(--accent-ruby));
+        }
+
+        /* --- Services Hub --- */
+        .services-section {
+            padding: 4rem 0 8rem 0;
+        }
+
+        .section-header {
             text-align: center;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.04);
-            transition: transform 0.3s ease, border-color 0.3s ease;
-            text-decoration: none; 
-            color: inherit; 
+            margin-bottom: 4rem;
+        }
+
+        .section-header h2 {
+            font-family: var(--font-display);
+            font-size: clamp(2rem, 4vw, 2.8rem);
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 2rem;
+        }
+
+        .service-card {
+            background: var(--card-bg);
+            border: 1px solid var(--card-border);
+            border-radius: 20px;
+            padding: 3rem 2rem;
+            text-decoration: none;
+            color: inherit;
             display: flex;
             flex-direction: column;
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            position: relative;
+            overflow: hidden;
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
         }
-        
+
+        /* Card Top Border Effect */
+        .service-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: var(--accent-plum);
+            transition: all 0.3s ease;
+        }
+
+        .service-card:nth-child(2)::before { background: var(--text-muted); }
+        .service-card:nth-child(3)::before { background: var(--accent-maroon); }
+
         .service-card:hover {
-            transform: translateY(-8px);
-            border-top-color: #96254a; /* Brightens on hover */
-            box-shadow: 0 8px 15px rgba(0,0,0,0.1);
+            transform: translateY(-10px);
+            border-color: rgba(171, 37, 79, 0.3);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.4), 0 0 20px rgba(171, 37, 79, 0.1);
+            background: rgba(45, 38, 45, 0.8);
+        }
+
+        .service-card:hover::before {
+            background: var(--accent-ruby);
+            box-shadow: 0 0 15px var(--accent-ruby);
+        }
+
+        .icon-wrapper {
+            width: 60px;
+            height: 60px;
+            border-radius: 14px;
+            background: rgba(255,255,255,0.05);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1.5rem;
+            color: var(--accent-ruby);
+            border: 1px solid rgba(255,255,255,0.05);
+            transition: all 0.3s ease;
+        }
+
+        .service-card:hover .icon-wrapper {
+            background: rgba(171, 37, 79, 0.15);
+            color: #ff6a92;
+            transform: scale(1.05);
         }
 
         .service-card h3 {
-            color: #51484f;
-            font-size: 1.8rem;
-            margin-top: 0;
+            font-family: var(--font-display);
+            font-size: 1.6rem;
+            font-weight: 600;
             margin-bottom: 1rem;
         }
-        
+
         .service-card p {
-            color: #666;
-            margin-bottom: 2rem;
-            font-size: 1.1rem;
+            color: var(--text-secondary);
+            font-size: 1.05rem;
+            margin-bottom: 2.5rem;
             flex-grow: 1;
+            font-weight: 300;
         }
 
-        .card-link-text {
-            color: #7a203e;
-            font-weight: bold;
-            text-transform: uppercase;
+        .card-link {
+            display: flex;
+            align-items: center;
             font-size: 0.95rem;
-            letter-spacing: 1px;
+            font-weight: 600;
+            color: var(--accent-ruby);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            transition: gap 0.3s ease;
+            gap: 8px;
         }
 
-        /* Footer */
-        footer {
-            text-align: center;
-            padding: 3rem 1rem;
-            background: #8b8589; /* Muted Mauve */
-            color: #ffffff;
-            margin-top: 5rem;
+        .service-card:hover .card-link {
+            gap: 14px;
+            color: #ff6b93;
         }
+
+        /* --- Footer --- */
+        footer {
+            border-top: 1px solid var(--card-border);
+            padding: 3rem 0;
+            text-align: center;
+            color: var(--text-muted);
+            font-size: 0.95rem;
+            background: rgba(0,0,0,0.2);
+        }
+
     </style>
 </head>
 <body>
 
-    <header>
+    <header class="hero">
         <div class="container">
-            <h1>EverettBlayne Accounting</h1>
-            <p>Providing precision bookkeeping, payroll management, and financial consulting to help your business operate efficiently and scale confidently.</p>
-            <a href="#services" class="cta-button">Explore Our Services</a>
+            <h1>Precision Accounting<br>For Modern Business</h1>
+            <p>Providing pristine bookkeeping, payroll management, and deep financial consulting to optimize your operations and scale with absolute confidence.</p>
+            <a href="#services" class="cta-btn">Explore Our Services</a>
         </div>
     </header>
 
-    <div class="container" id="services" style="margin-top: 4rem;">
-        <h2 class="section-title">How Can We Help Your Business?</h2>
-        
-        <div class="services-grid">
+    <section id="services" class="services-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>How Can We Help Your Business?</h2>
+            </div>
             
-            <a href="bookkeeping.html" class="service-card">
-                <h3>Bookkeeping</h3>
-                <p>From essential monthly compliance and reconciliations to dedicated operational support and custom workflow automation.</p>
-                <span class="card-link-text">View Pricing & Plans &rarr;</span>
-            </a>
+            <div class="services-grid">
+                
+                <!-- Bookkeeping -->
+                <a href="bookkeeping.html" class="service-card">
+                    <div class="icon-wrapper">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1 0-5H20"/>
+                            <path d="M8 7h6"/><path d="M8 11h8"/>
+                        </svg>
+                    </div>
+                    <h3>Bookkeeping</h3>
+                    <p>From essential monthly compliance and reconciliations to dedicated operational support and custom workflow automation.</p>
+                    <div class="card-link">View Pricing & Plans <span>&rarr;</span></div>
+                </a>
 
-            <a href="payroll.html" class="service-card" style="border-top-color: #51484f;">
-                <h3>Payroll Services</h3>
-                <p>Ensure your team is paid accurately and on time with flawless compliance. Setup and processing are handled with advanced expertise in QuickBooks Online payroll and banking modules, guaranteeing seamless tax withholdings and direct deposits.</p>
-                <span class="card-link-text">Learn More &rarr;</span>
-            </a>
+                <!-- Payroll -->
+                <a href="payroll.html" class="service-card">
+                    <div class="icon-wrapper">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <rect x="2" y="6" width="20" height="12" rx="2"/><path d="M12 12h.01"/>
+                            <path d="M17 12h.01"/><path d="M7 12h.01"/>
+                        </svg>
+                    </div>
+                    <h3>Payroll Services</h3>
+                    <p>Ensure your team is paid accurately and on time with flawless compliance. Setup and processing are expertly handled via QuickBooks.</p>
+                    <div class="card-link">Learn More <span>&rarr;</span></div>
+                </a>
 
-            <a href="consultations.html" class="service-card" style="border-top-color: #7a203e;">
-                <h3>Consultations</h3>
-                <p>Deep-dive advisory sessions focusing on cost accounting, job order setups, and database workflow efficiency.</p>
-                <span class="card-link-text">Book a Session &rarr;</span>
-            </a>
+                <!-- Consultations -->
+                <a href="consultations.html" class="service-card">
+                    <div class="icon-wrapper">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/>
+                            <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/>
+                        </svg>
+                    </div>
+                    <h3>Consultations</h3>
+                    <p>Deep-dive advisory sessions focusing on cost accounting, job order setups, and database workflow efficiency.</p>
+                    <div class="card-link">Book a Session <span>&rarr;</span></div>
+                </a>
 
+            </div>
         </div>
-    </div>
+    </section>
 
     <footer>
-        <p>&copy; 2026 EverettBlayne Accounting. All rights reserved.</p>
+        <div class="container">
+            <p>&copy; 2026 EverettBlayne Accounting. All rights reserved.</p>
+        </div>
     </footer>
 
 </body>

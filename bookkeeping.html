@@ -1,253 +1,213 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-YOUR_ID_HERE"></script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-18085429312"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
-
-      gtag('config', 'AW-YOUR_ID_HERE');
+      gtag('config', 'AW-18085429312');
     </script>
+    
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>EverettBlayne Accounting | Bookkeeping Services</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;600;800&display=swap" rel="stylesheet">
+    
     <style>
-        /* Base Colors */
+        :root {
+            --bg-charcoal: #121013;
+            --bg-gradient-top: #291e23;
+            --card-bg: rgba(33, 30, 36, 0.6);
+            --card-border: rgba(255, 255, 255, 0.08);
+            --accent-maroon: #7a203e;
+            --accent-ruby: #ab254f;
+            --accent-plum: #51484f;
+            --text-primary: #f8f8f8;
+            --text-secondary: #aba4a8;
+            --text-muted: #746d71;
+            --font-display: 'Outfit', sans-serif;
+            --font-body: 'Inter', sans-serif;
+        }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            line-height: 1.6;
-            margin: 0;
-            padding: 0;
-            color: #333;
-            background-color: #fbfbfb;
+            font-family: var(--font-body);
+            background: var(--bg-charcoal);
+            background-image: radial-gradient(ellipse at 50% -20%, var(--bg-gradient-top) 0%, var(--bg-charcoal) 80%);
+            color: var(--text-primary);
+            line-height: 1.7;
+            min-height: 100vh;
+            -webkit-font-smoothing: antialiased;
         }
-        .container {
-            max-width: 1000px;
-            margin: auto;
-            padding: 2rem 1rem;
-        }
+        .container { max-width: 900px; margin: 0 auto; padding: 0 5%; }
         
-        /* Navigation (Simple Back Link) */
-        .nav-bar {
-            background-color: #51484f; 
-            padding: 1rem;
-            text-align: center;
-        }
-        .nav-bar a {
-            color: #ffffff;
+        .nav-back {
+            display: inline-flex;
+            align-items: center;
+            padding: 2rem 0;
+            color: var(--text-muted);
             text-decoration: none;
-            font-weight: bold;
-            font-size: 1.1rem;
-            letter-spacing: 1px;
+            font-weight: 500;
+            font-size: 0.95rem;
             transition: color 0.3s ease;
         }
-        .nav-bar a:hover {
-            color: #8b8589; 
+        .nav-back:hover { color: var(--accent-ruby); }
+        .nav-back span { margin-right: 8px; }
+
+        .page-header { margin-bottom: 3rem; text-align: center; }
+        .page-header h1 {
+            font-family: var(--font-display);
+            font-size: clamp(2rem, 5vw, 3.5rem);
+            font-weight: 800;
+            letter-spacing: -0.02em;
+            margin-bottom: 1rem;
+            background: linear-gradient(to right, #fff, #ebaebc);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .page-header p {
+            font-size: 1.15rem;
+            color: var(--text-secondary);
+            font-weight: 300;
         }
 
-        /* Header */
-        header {
-            background: #ffffff;
-            color: #51484f;
-            padding: 4rem 1rem 2rem;
-            text-align: center;
-            border-bottom: 2px solid #e0e0e0;
+        .content-box {
+            background: var(--card-bg);
+            border: 1px solid var(--card-border);
+            border-radius: 20px;
+            padding: 4rem;
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            margin-bottom: 4rem;
+            position: relative;
+            overflow: hidden;
         }
-        header h1 {
-            margin: 0;
-            font-size: 2.8rem;
-            color: #7a203e; 
+        .content-box::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 5px;
+            background: var(--accent-ruby);
         }
-        header p {
-            font-size: 1.2rem;
-            margin: 1rem auto 2rem;
-            max-width: 800px;
-            color: #666;
+
+        .content-box h3 {
+            font-family: var(--font-display);
+            font-size: 1.8rem;
+            color: #fff;
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+            border-bottom: 1px solid var(--card-border);
+            padding-bottom: 0.5rem;
+        }
+        .content-box h3:first-child { margin-top: 0; }
+        
+        .content-box h4 {
+            font-family: var(--font-display);
+            font-size: 1.3rem;
+            color: #ebaebc;
+            margin-top: 1.5rem;
+            margin-bottom: 0.5rem;
         }
         
-        /* Buttons */
-        .cta-button {
-            display: inline-block;
-            background: #7a203e; 
-            color: #ffffff;
-            padding: 0.85rem 2rem;
-            text-decoration: none;
-            border-radius: 4px;
-            font-weight: bold;
-            font-size: 1.1rem;
-            transition: background 0.3s ease;
-            border: none;
-            cursor: pointer;
+        .content-box p { color: var(--text-secondary); margin-bottom: 1.5rem; font-weight: 300; }
+        
+        .content-box ul {
+            list-style: none;
+            margin-bottom: 2rem;
         }
-        .cta-button:hover {
-            background: #96254a; 
-        }
-
-        /* Pricing Grid */
-        .pricing-grid {
-            display: flex;
-            gap: 2rem;
-            flex-wrap: wrap;
-            margin-top: 2rem;
-            align-items: stretch;
-        }
-        .pricing-card {
-            flex: 1;
-            min-width: 300px;
-            background: #ffffff;
-            border: 1px solid #e0e0e0;
-            border-top: 6px solid #8b8589; 
-            padding: 2.5rem;
-            border-radius: 8px;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.04);
-            transition: transform 0.3s ease;
-            display: flex;
-            flex-direction: column;
-        }
-        .pricing-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 8px 15px rgba(0,0,0,0.1);
-        }
-        .pricing-card h3 {
-            color: #51484f;
-            margin-top: 0;
-            font-size: 1.5rem;
-        }
-        .price {
-            font-size: 1.8rem;
-            font-weight: bold;
-            color: #7a203e; 
-            margin-bottom: 0.2rem;
-        }
-        .price-subtext {
-            font-size: 0.9rem;
-            color: #666;
-            margin-bottom: 1.5rem;
-            display: block;
-            font-weight: bold;
-        }
-        .pricing-card ul {
+        .content-box ul li {
+            position: relative;
             padding-left: 1.5rem;
-            margin-bottom: 1.5rem;
-            color: #555;
-            flex-grow: 1;
+            margin-bottom: 0.8rem;
+            color: var(--text-primary);
         }
-        .pricing-card li {
-            margin-bottom: 0.5rem;
-        }
-
-        /* Add-on Box Styling */
-        .addon-box {
-            background: #f8f6f7;
-            padding: 1.2rem;
-            border-radius: 4px;
-            border-left: 4px solid #7a203e;
-            margin-bottom: 1.5rem;
-        }
-        .addon-box h4 {
-            margin-top: 0;
-            margin-bottom: 0.5rem;
-            color: #51484f;
-            font-size: 1.05rem;
-        }
-        .addon-box ul {
-            margin-bottom: 0;
-            padding-left: 1.2rem;
-            font-size: 0.95rem;
+        .content-box ul li::before {
+            content: '•';
+            position: absolute;
+            left: 0;
+            color: var(--accent-ruby);
+            font-weight: bold;
         }
 
-        /* Call to Action Section */
-        .booking-section {
-            background-color: #51484f; 
-            color: #ffffff;
-            text-align: center;
-            padding: 4rem 2rem;
-            border-radius: 8px;
-            margin-top: 4rem;
-            border-bottom: 6px solid #96254a; 
+        .cta-section { text-align: center; margin-top: 4rem; padding-top: 3rem; border-top: 1px solid var(--card-border); }
+        .cta-section h2 { font-family: var(--font-display); font-size: 2rem; margin-bottom: 1rem; }
+        .cta-section p { color: var(--text-secondary); margin-bottom: 2rem; max-width: 600px; margin-left: auto; margin-right: auto; }
+
+        .cta-btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 1.1rem 2.5rem;
+            background: linear-gradient(135deg, var(--accent-ruby), var(--accent-maroon));
+            color: white;
+            font-family: var(--font-body);
+            font-weight: 600;
+            font-size: 1.1rem;
+            text-decoration: none;
+            border-radius: 50px;
+            box-shadow: 0 10px 25px rgba(122, 32, 62, 0.4);
+            transition: all 0.3s ease;
+            border: 1px solid rgba(255,255,255,0.1);
         }
-        .booking-section h2 {
-            margin-top: 0;
-            font-size: 2rem;
-        }
-        .booking-section p {
-            max-width: 600px;
-            margin: 0 auto 2rem;
-            color: #e2e0e1;
+        .cta-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 30px rgba(171, 37, 79, 0.5);
+            background: linear-gradient(135deg, #c32b5b, var(--accent-ruby));
         }
 
-        /* Footer */
-        footer {
-            text-align: center;
-            padding: 3rem 1rem;
-            background: #8b8589; 
-            color: #ffffff;
-            margin-top: 5rem;
-        }
+        footer { border-top: 1px solid var(--card-border); padding: 3rem 0; text-align: center; color: var(--text-muted); font-size: 0.95rem; background: rgba(0,0,0,0.2); margin-top: 4rem; }
     </style>
 </head>
 <body>
 
-    <div class="nav-bar">
-        <a href="index.html">&larr; Back to Main Site</a>
-    </div>
+    <div class="container">
+        <a href="index.html" class="nav-back"><span>&larr;</span> Back to Main Site</a>
 
-    <header>
-        <div class="container">
+        <div class="page-header">
             <h1>Professional Bookkeeping Services</h1>
             <p>Strategic financial management, accurate reporting, and workflow automation so you can focus on growing your business.</p>
         </div>
-    </header>
 
-    <div class="container">
-        
-        <div class="pricing-grid">
-            
-            <div class="pricing-card">
-                <h3>The Starter Package</h3>
-                <div class="price">$50 / Hour</div>
-                <span class="price-subtext">2-hour monthly minimum ($100/mo)</span>
-                <p>Perfect for early-stage businesses needing basic compliance and "lite" monthly maintenance. <strong>Includes up to 2 financial accounts.</strong></p>
-                <ul>
-                    <li>Monthly categorization of bank and credit card transactions</li>
-                    <li>Reconciliation of up to two accounts per month</li>
-                    <li>Delivery of standard monthly financial statements (Balance Sheet & P&L)</li>
-                </ul>
-                
-                <div class="addon-box">
-                    <h4>A La Carte Add-Ons:</h4>
-                    <ul>
-                        <li>Additional Bank/Credit Accounts: <strong>+$25/mo per account</strong></li>
-                        <li>Accounts Payable/Receivable Processing: <strong>+$50/mo</strong></li>
-                    </ul>
-                </div>
+        <div class="content-box">
+            <h3>The Starter Package</h3>
+            <p>Perfect for early-stage businesses needing basic compliance and "lite" monthly maintenance. Includes up to 2 financial accounts.</p>
+            <ul>
+                <li>Monthly categorization of bank and credit card transactions</li>
+                <li>Reconciliation of up to two accounts per month</li>
+                <li>Delivery of standard monthly financial statements (Balance Sheet & P&L)</li>
+            </ul>
+
+            <h4>A La Carte Add-Ons:</h4>
+            <ul>
+                <li>Additional Bank/Credit Accounts: +$25/mo per account</li>
+                <li>Accounts Payable/Receivable Processing: +$50/mo</li>
+            </ul>
+
+            <h3>The Outsourced Controller</h3>
+            <p>Comprehensive, flat-fee monthly support for growing businesses. Stop paying by the hour and get a dedicated financial partner.</p>
+            <ul>
+                <li>Unlimited financial accounts</li>
+                <li>Custom workflow automation (VBA/Python) to reduce data entry errors</li>
+                <li>Job order costing, accruals, and advanced management reporting</li>
+                <li>Priority email and phone support during business hours</li>
+                <li>Proactive cash flow forecasting</li>
+            </ul>
+
+            <div class="cta-section">
+                <h2>Ready to streamline your books?</h2>
+                <p>Let's get your accounting system structured for long-term success. Reach out to discuss your current setup and find the right package for you.</p>
+                <a href="https://calendly.com/everettbirving/30min" class="cta-btn" target="_blank">Schedule Your Introductory Call</a>
             </div>
-
-            <div class="pricing-card" style="border-top-color: #51484f;">
-                <h3>The Outsourced Controller</h3>
-                <div class="price">Starting at $500 / mo</div>
-                <span class="price-subtext">Custom quoted based on operational volume</span>
-                <p>Comprehensive, flat-fee monthly support for growing businesses. Stop paying by the hour and get a dedicated financial partner.</p>
-                <ul>
-                    <li><strong>Unlimited</strong> financial accounts</li>
-                    <li>Custom workflow automation (VBA/Python) to reduce data entry errors</li>
-                    <li>Job order costing, accruals, and advanced management reporting</li>
-                    <li>Priority email and phone support during business hours</li>
-                    <li>Proactive cash flow forecasting</li>
-                </ul>
-            </div>
-        </div>
-
-        <div class="booking-section" id="book">
-            <h2>Ready to streamline your books?</h2>
-            <p>Let's get your accounting system structured for long-term success. Reach out to discuss your current setup and find the right package for you.</p>
-            <a href="https://calendly.com/everettbirving/30min" target="_blank" class="cta-button" style="background-color: #ffffff; color: #7a203e;">Schedule Your Introductory Call</a>
         </div>
     </div>
 
     <footer>
-        <p>&copy; 2026 EverettBlayne Accounting. All rights reserved.</p>
+        <div class="container">
+            <p>&copy; 2026 EverettBlayne Accounting. All rights reserved.</p>
+        </div>
     </footer>
 
 </body>

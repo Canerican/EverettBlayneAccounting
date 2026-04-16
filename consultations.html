@@ -1,221 +1,213 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=AW-18085429312"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'AW-18085429312');
-</script>
-
+    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-18085429312"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'AW-18085429312');
+    </script>
+    
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>EverettBlayne Accounting | Consultations</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;600;800&display=swap" rel="stylesheet">
+    
     <style>
-        /* Base Colors */
+        :root {
+            --bg-charcoal: #121013;
+            --bg-gradient-top: #291e23;
+            --card-bg: rgba(33, 30, 36, 0.6);
+            --card-border: rgba(255, 255, 255, 0.08);
+            --accent-maroon: #7a203e;
+            --accent-ruby: #ab254f;
+            --accent-plum: #51484f;
+            --text-primary: #f8f8f8;
+            --text-secondary: #aba4a8;
+            --text-muted: #746d71;
+            --font-display: 'Outfit', sans-serif;
+            --font-body: 'Inter', sans-serif;
+        }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            line-height: 1.6;
-            margin: 0;
-            padding: 0;
-            color: #333;
-            background-color: #fbfbfb;
+            font-family: var(--font-body);
+            background: var(--bg-charcoal);
+            background-image: radial-gradient(ellipse at 50% -20%, var(--bg-gradient-top) 0%, var(--bg-charcoal) 80%);
+            color: var(--text-primary);
+            line-height: 1.7;
+            min-height: 100vh;
+            -webkit-font-smoothing: antialiased;
         }
-        .container {
-            max-width: 1100px;
-            margin: auto;
-            padding: 2rem 1rem;
-        }
+        .container { max-width: 900px; margin: 0 auto; padding: 0 5%; }
         
-        /* Navigation (Simple Back Link) */
-        .nav-bar {
-            background-color: #51484f;
-            padding: 1rem;
-            text-align: center;
-        }
-        .nav-bar a {
-            color: #ffffff;
+        .nav-back {
+            display: inline-flex;
+            align-items: center;
+            padding: 2rem 0;
+            color: var(--text-muted);
             text-decoration: none;
-            font-weight: bold;
-            font-size: 1.1rem;
-            letter-spacing: 1px;
+            font-weight: 500;
+            font-size: 0.95rem;
             transition: color 0.3s ease;
         }
-        .nav-bar a:hover {
-            color: #8b8589;
-        }
+        .nav-back:hover { color: var(--accent-ruby); }
+        .nav-back span { margin-right: 8px; }
 
-        /* Header */
-        header {
-            background: #ffffff;
-            color: #51484f;
-            padding: 4rem 1rem 2rem;
-            text-align: center;
-            border-bottom: 2px solid #e0e0e0;
-        }
-        header h1 {
-            margin: 0;
-            font-size: 2.8rem;
-            color: #7a203e; 
-        }
-        header p {
-            font-size: 1.2rem;
-            margin: 1rem auto 2rem;
-            max-width: 800px;
-            color: #666;
-        }
-        
-        /* Buttons */
-        .cta-button {
-            display: inline-block;
-            background: #7a203e; 
-            color: #ffffff;
-            padding: 0.85rem 2rem;
-            text-decoration: none;
-            border-radius: 4px;
-            font-weight: bold;
-            font-size: 1.1rem;
-            transition: background 0.3s ease;
-            border: none;
-            cursor: pointer;
-        }
-        .cta-button:hover {
-            background: #96254a; 
-        }
-
-        /* Consultation Grid */
-        .consult-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-            gap: 2rem;
-            margin-top: 3rem;
-        }
-
-        .consult-card {
-            background: #ffffff;
-            padding: 2.5rem;
-            border-radius: 8px;
-            border-left: 6px solid #8b8589; 
-            box-shadow: 0 4px 10px rgba(0,0,0,0.05);
-        }
-
-        .consult-card h3 {
-            color: #51484f;
-            font-size: 1.5rem;
-            margin-top: 0;
+        .page-header { margin-bottom: 3rem; text-align: center; }
+        .page-header h1 {
+            font-family: var(--font-display);
+            font-size: clamp(2rem, 5vw, 3.5rem);
+            font-weight: 800;
+            letter-spacing: -0.02em;
             margin-bottom: 1rem;
+            background: linear-gradient(to right, #fff, #ebaebc);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .page-header p {
+            font-size: 1.15rem;
+            color: var(--text-secondary);
+            font-weight: 300;
         }
 
-        .consult-card ul {
-            padding-left: 1.2rem;
-            color: #555;
+        .content-box {
+            background: var(--card-bg);
+            border: 1px solid var(--card-border);
+            border-radius: 20px;
+            padding: 4rem;
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            margin-bottom: 4rem;
+            position: relative;
+            overflow: hidden;
+        }
+        .content-box::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 5px;
+            background: var(--accent-maroon);
         }
 
-        .consult-card li {
-            margin-bottom: 0.5rem;
+        .content-box h3 {
+            font-family: var(--font-display);
+            font-size: 1.8rem;
+            color: #fff;
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+            border-bottom: 1px solid var(--card-border);
+            padding-bottom: 0.5rem;
+        }
+        .content-box h3:first-child { margin-top: 0; }
+        
+        .content-box p { color: var(--text-secondary); margin-bottom: 1.5rem; font-weight: 300; }
+        
+        .content-box ul {
+            list-style: none;
+            margin-bottom: 2rem;
+        }
+        .content-box ul li {
+            position: relative;
+            padding-left: 1.5rem;
+            margin-bottom: 0.8rem;
+            color: var(--text-primary);
+        }
+        .content-box ul li::before {
+            content: '•';
+            position: absolute;
+            left: 0;
+            color: var(--accent-ruby);
+            font-weight: bold;
         }
 
-        /* Call to Action Section */
-        .booking-section {
-            background-color: #51484f;
-            color: #ffffff;
-            text-align: center;
-            padding: 4rem 2rem;
-            border-radius: 8px;
-            margin-top: 4rem;
+        .cta-section { text-align: center; margin-top: 4rem; padding-top: 3rem; border-top: 1px solid var(--card-border); }
+        .cta-section h2 { font-family: var(--font-display); font-size: 2rem; margin-bottom: 1rem; }
+        .cta-section p { color: var(--text-secondary); margin-bottom: 2rem; max-width: 600px; margin-left: auto; margin-right: auto; }
+
+        .cta-btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 1.1rem 2.5rem;
+            background: linear-gradient(135deg, var(--accent-ruby), var(--accent-maroon));
+            color: white;
+            font-family: var(--font-body);
+            font-weight: 600;
+            font-size: 1.1rem;
+            text-decoration: none;
+            border-radius: 50px;
+            box-shadow: 0 10px 25px rgba(122, 32, 62, 0.4);
+            transition: all 0.3s ease;
+            border: 1px solid rgba(255,255,255,0.1);
         }
-        .booking-section h2 {
-            margin-top: 0;
-            font-size: 2rem;
-        }
-        .booking-section p {
-            max-width: 600px;
-            margin: 0 auto 2rem;
-            color: #e2e0e1;
+        .cta-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 30px rgba(171, 37, 79, 0.5);
+            background: linear-gradient(135deg, #c32b5b, var(--accent-ruby));
         }
 
-        /* Footer */
-        footer {
-            text-align: center;
-            padding: 3rem 1rem;
-            background: #8b8589; 
-            color: #ffffff;
-            margin-top: 5rem;
-        }
+        footer { border-top: 1px solid var(--card-border); padding: 3rem 0; text-align: center; color: var(--text-muted); font-size: 0.95rem; background: rgba(0,0,0,0.2); margin-top: 4rem; }
     </style>
 </head>
 <body>
 
-    <div class="nav-bar">
-        <a href="index.html">&larr; Back to Main Site</a>
-    </div>
+    <div class="container">
+        <a href="index.html" class="nav-back"><span>&larr;</span> Back to Main Site</a>
 
-    <header>
-        <div class="container">
+        <div class="page-header">
             <h1>Strategic Advisory & Systems Design</h1>
             <p>Modern accounting requires more than just entering numbers. It requires building robust data pipelines, normalizing databases, and implementing workflows that scale alongside your business.</p>
         </div>
-    </header>
 
-    <div class="container">
-        
-        <div class="consult-grid">
+        <div class="content-box">
+            <h3>Workflow Automation & Scripting</h3>
+            <p>Stop wasting hours on manual data entry. I build custom solutions to bridge the gap between your operational software and your accounting system.</p>
+            <ul>
+                <li>Custom VBA scripting for advanced Excel modeling and reporting.</li>
+                <li>Python-based data analysis to extract insights from large financial datasets.</li>
+                <li>Automated transaction categorization and reconciliation workflows.</li>
+            </ul>
+
+            <h3>Database Design & Normalization</h3>
+            <p>Clean data is the foundation of accurate accounting. If your inventory or financial data is a mess, I can help you restructure it.</p>
+            <ul>
+                <li>SQL query design for custom financial reporting.</li>
+                <li>Database normalization to eliminate data redundancy and ensure integrity.</li>
+                <li>Chart of Accounts optimization for improved managerial oversight.</li>
+            </ul>
+
+            <h3>Business Strategy & Costing</h3>
+            <p>Translate your financial statements into actionable business strategy using proven analytical frameworks.</p>
+            <ul>
+                <li>Implementation of precise Job Order Costing systems.</li>
+                <li>Market positioning and competitive analysis (PESTEL, Porter’s Five Forces).</li>
+                <li>Cash flow forecasting and budget variance analysis.</li>
+            </ul>
             
-            <div class="consult-card">
-                <h3>Workflow Automation & Scripting</h3>
-                <p>Stop wasting hours on manual data entry. I build custom solutions to bridge the gap between your operational software and your accounting system.</p>
-                <ul>
-                    <li>Custom VBA scripting for advanced Excel modeling and reporting.</li>
-                    <li>Python-based data analysis to extract insights from large financial datasets.</li>
-                    <li>Automated transaction categorization and reconciliation workflows.</li>
-                </ul>
-            </div>
+            <h3>Accounting System Setup</h3>
+            <p>Starting from scratch or migrating from legacy software? Get your books set up correctly the very first time.</p>
+            <ul>
+                <li>Complete QuickBooks Online implementation and historical clean-up.</li>
+                <li>Integration of third-party payment processors and payroll systems.</li>
+                <li>Customized financial statement design for your specific industry.</li>
+            </ul>
 
-            <div class="consult-card" style="border-left-color: #7a203e;">
-                <h3>Database Design & Normalization</h3>
-                <p>Clean data is the foundation of accurate accounting. If your inventory or financial data is a mess, I can help you restructure it.</p>
-                <ul>
-                    <li>SQL query design for custom financial reporting.</li>
-                    <li>Database normalization to eliminate data redundancy and ensure integrity.</li>
-                    <li>Chart of Accounts optimization for improved managerial oversight.</li>
-                </ul>
+            <div class="cta-section">
+                <h2>Let's Optimize Your Operations</h2>
+                <p>Whether you need a one-time database clean-up, a custom VBA script, or ongoing strategic advisory, schedule a consultation to discuss your specific technical needs.</p>
+                <a href="https://calendly.com/everettbirving/30min" class="cta-btn" target="_blank">Schedule a Strategy Call</a>
             </div>
-
-            <div class="consult-card" style="border-left-color: #96254a;">
-                <h3>Business Strategy & Costing</h3>
-                <p>Translate your financial statements into actionable business strategy using proven analytical frameworks.</p>
-                <ul>
-                    <li>Implementation of precise Job Order Costing systems.</li>
-                    <li>Market positioning and competitive analysis (PESTEL, Porter’s Five Forces).</li>
-                    <li>Cash flow forecasting and budget variance analysis.</li>
-                </ul>
-            </div>
-
-            <div class="consult-card">
-                <h3>Accounting System Setup</h3>
-                <p>Starting from scratch or migrating from legacy software? Get your books set up correctly the very first time.</p>
-                <ul>
-                    <li>Complete QuickBooks Online implementation and historical clean-up.</li>
-                    <li>Integration of third-party payment processors and payroll systems.</li>
-                    <li>Customized financial statement design for your specific industry.</li>
-                </ul>
-            </div>
-
         </div>
-
-        <div class="booking-section" id="book">
-            <h2>Let's Optimize Your Operations</h2>
-            <p>Whether you need a one-time database clean-up, a custom VBA script, or ongoing strategic advisory, schedule a consultation to discuss your specific technical needs.</p>
-            <a href="https://calendly.com/everettbirving/30min" target="_blank" class="cta-button" style="background-color: #ffffff; color: #7a203e;">Schedule a Strategy Call</a>
-        </div>
-
     </div>
 
     <footer>
-        <p>&copy; 2026 EverettBlayne Accounting. All rights reserved.</p>
+        <div class="container">
+            <p>&copy; 2026 EverettBlayne Accounting. All rights reserved.</p>
+        </div>
     </footer>
 
 </body>

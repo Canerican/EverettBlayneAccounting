@@ -126,6 +126,25 @@
             background: linear-gradient(135deg, #c32b5b, var(--accent-ruby));
         }
 
+        .cta-btn.secondary {
+            background: transparent;
+            border: 2px solid var(--accent-ruby);
+            box-shadow: none;
+        }
+
+        .cta-btn.secondary:hover {
+            background: rgba(171, 37, 79, 0.1);
+            box-shadow: 0 10px 25px rgba(171, 37, 79, 0.2);
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 1.5rem;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
         /* --- Services Hub --- */
         .services-section {
             padding: 4rem 0 8rem 0;
@@ -473,7 +492,10 @@
         <div class="container">
             <h1>Precision Accounting<br>For Modern Business</h1>
             <p>Providing pristine bookkeeping, payroll management, and deep financial consulting to optimize your operations and scale with absolute confidence.</p>
-            <a href="#services" class="cta-btn">Explore Our Services</a>
+            <div class="hero-buttons">
+                <a href="#services" class="cta-btn">Explore Our Services</a>
+                <a href="#appointment" class="cta-btn secondary">Book an Appointment Now</a>
+            </div>
         </div>
     </header>
 

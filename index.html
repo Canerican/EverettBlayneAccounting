@@ -464,6 +464,65 @@
             border-bottom-right-radius: 20px;
         }
 
+        .pro-profile-wrapper {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .pro-avatar {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background: rgba(255,255,255,0.05);
+            border: 2px solid var(--accent-ruby);
+            object-fit: cover;
+        }
+
+        .pro-info {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .pro-name {
+            font-weight: 600;
+            color: #fff;
+            font-size: 1.1rem;
+        }
+
+        .pro-title {
+            color: var(--accent-ruby);
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        .pro-clickable-indicator {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-top: 1.5rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+            font-weight: 600;
+            transition: color 0.3s ease;
+        }
+
+        .proadvisor-card:hover .pro-clickable-indicator {
+            color: #ff6b93;
+        }
+
+        .proadvisor-card:hover .pro-clickable-indicator svg {
+            transform: translateX(5px);
+            color: #ff6b93;
+        }
+
+        .pro-clickable-indicator svg {
+            transition: all 0.3s ease;
+        }
+
         @media (max-width: 800px) {
             .about-container {
                 flex-direction: column;
@@ -575,9 +634,21 @@ quickbooks-online-payroll-certification.png" alt="Advanced Certification Badge" 
                 <a href="https://proadvisor.intuit.com/app/accountant/search?searchId=EverettBlayne" target="_blank" rel="noopener noreferrer" class="proadvisor-card" style="text-decoration: none; display: block; cursor: pointer;">
                     <div class="pro-header">ProAdvisor</div>
                     <div class="pro-body">
-                        <div class="pro-line"></div>
-                        <div class="pro-line short"></div>
-                        <div class="pro-line"></div>
+                        <div class="pro-profile-wrapper">
+                            <!-- Replace the src below with your own profile picture image path -->
+                            <img src="https://ui-avatars.com/api/?name=Everett+Blayne&background=7a203e&color=fff&size=150" alt="Everett Blayne" class="pro-avatar" title="Replace this with your profile picture">
+                            <div class="pro-info">
+                                <span class="pro-name">Everett Blayne</span>
+                                <span class="pro-title">Certified Pro</span>
+                            </div>
+                        </div>
+                        <div class="pro-clickable-indicator">
+                            <span>View Full Profile</span>
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M5 12h14"></path>
+                                <path d="m12 5 7 7-7 7"></path>
+                            </svg>
+                        </div>
                     </div>
                     <div class="pro-accent"></div>
                 </a>
@@ -593,3 +664,4 @@ quickbooks-online-payroll-certification.png" alt="Advanced Certification Badge" 
 
 </body>
 </html>
+

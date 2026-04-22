@@ -127,22 +127,65 @@
         }
 
         .cta-btn.secondary {
-            background: transparent;
-            border: 2px solid var(--accent-ruby);
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255,255,255,0.2);
             box-shadow: none;
         }
 
         .cta-btn.secondary:hover {
-            background: rgba(171, 37, 79, 0.1);
-            box-shadow: 0 10px 25px rgba(171, 37, 79, 0.2);
+            background: rgba(255, 255, 255, 0.1);
+            box-shadow: 0 10px 25px rgba(255, 255, 255, 0.1);
         }
 
-        .hero-buttons {
+        .cta-group {
             display: flex;
-            gap: 1.5rem;
-            justify-content: center;
+            flex-direction: column;
             align-items: center;
+            gap: 1.5rem;
+            margin-top: 1.5rem;
+        }
+
+        .email-options {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 1rem;
             flex-wrap: wrap;
+            background: rgba(0,0,0,0.3);
+            padding: 0.8rem 1.5rem;
+            border-radius: 50px;
+            border: 1px solid rgba(255,255,255,0.05);
+            box-shadow: inset 0 2px 10px rgba(0,0,0,0.2);
+        }
+
+        .email-text {
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+            font-weight: 500;
+            margin-right: 0.5rem;
+        }
+
+        .cta-btn-secondary {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0.6rem 1.5rem;
+            background: rgba(255, 255, 255, 0.05);
+            color: var(--text-primary);
+            font-family: var(--font-body);
+            font-weight: 500;
+            font-size: 0.95rem;
+            text-decoration: none;
+            border-radius: 50px;
+            transition: all 0.3s ease;
+            border: 1px solid rgba(255,255,255,0.1);
+        }
+
+        .cta-btn-secondary:hover {
+            transform: translateY(-2px);
+            background: rgba(255, 255, 255, 0.1);
+            border-color: rgba(255,255,255,0.3);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
         }
 
         /* --- Services Hub --- */
@@ -551,9 +594,16 @@
         <div class="container">
             <h1>Precision Accounting<br>For Modern Business</h1>
             <p>Providing pristine bookkeeping, payroll management, and deep financial consulting to optimize your operations and scale with absolute confidence.</p>
-            <div class="hero-buttons">
-                <a href="#services" class="cta-btn">Explore Our Services</a>
-                <a href="#appointment" class="cta-btn secondary">Book an Appointment Now</a>
+            <div class="cta-group">
+                <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+                    <a href="https://calendly.com/everettbirving/30min" class="cta-btn" target="_blank">Schedule a Call</a>
+                    <a href="#services" class="cta-btn secondary">Explore Our Services</a>
+                </div>
+                <div class="email-options">
+                    <span class="email-text">Prefer email?</span>
+                    <a href="mailto:everettbirving@gmail.com?subject=Inquiry%20about%20Accounting%20Services&body=Hi%20Everett%2C%0D%0A%0D%0AI'm%20interested%20in%20learning%20more%20about%20how%20you%20can%20help%20my%20business.%0D%0A%0D%0A" class="cta-btn-secondary">Everett</a>
+                    <a href="mailto:everettbirving@gmail.com?subject=Inquiry%20about%20Accounting%20Services&body=Hi%20Blayne%2C%0D%0A%0D%0AI'm%20interested%20in%20learning%20more%20about%20how%20you%20can%20help%20my%20business.%0D%0A%0D%0A" class="cta-btn-secondary">Blayne</a>
+                </div>
             </div>
         </div>
     </header>
@@ -664,4 +714,5 @@ quickbooks-online-payroll-certification.png" alt="Advanced Certification Badge" 
 
 </body>
 </html>
+
 

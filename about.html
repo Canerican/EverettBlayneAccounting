@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-18085429312"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'AW-18085429312');
+    </script>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Firm | EverettBlayne CPAs</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@300;400;600;800&family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,600&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --bg-primary: #ffffff;
+            --bg-secondary: #f4f6f8;
+            --bg-accent: #eef1f5;
+            
+            --text-dark: #1e293b;
+            --text-body: #475569;
+            --text-muted: #94a3b8;
+            
+            --brand-ruby: #8A1538;
+            --brand-maroon: #5E0E25;
+            --brand-navy: #0f172a;
+            
+            --border-light: #e2e8f0;
+            
+            --font-logo: 'Playfair Display', serif;
+            --font-display: 'Outfit', sans-serif;
+            --font-body: 'Inter', sans-serif;
+            
+            --shadow-sm: 0 1px 3px rgba(0,0,0,0.05);
+            --shadow-md: 0 4px 6px -1px rgba(0,0,0,0.05), 0 2px 4px -1px rgba(0,0,0,0.03);
+            --shadow-lg: 0 10px 25px -3px rgba(0,0,0,0.08), 0 4px 6px -2px rgba(0,0,0,0.04);
+        }
+
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { font-family: var(--font-body); background: var(--bg-secondary); color: var(--text-body); line-height: 1.7; -webkit-font-smoothing: antialiased; }
+        a { text-decoration: none; color: inherit; }
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 5%; }
+
+        /* --- Navigation Bar --- */
+        nav { background: rgba(255, 255, 255, 0.95); backdrop-filter: blur(10px); position: sticky; top: 0; z-index: 100; border-bottom: 1px solid var(--border-light); padding: 1rem 0; }
+        .nav-container { display: flex; justify-content: space-between; align-items: center; }
+        .logo { font-family: var(--font-logo); font-size: 1.8rem; font-weight: 800; color: var(--brand-navy); letter-spacing: -0.01em; font-style: italic; }
+        .logo span { color: var(--brand-ruby); }
+        .nav-links { display: flex; gap: 2rem; align-items: center; }
+        .nav-link { font-weight: 500; color: var(--text-dark); font-size: 0.95rem; transition: color 0.3s ease; }
+        .nav-link:hover { color: var(--brand-ruby); }
+        .btn-nav-portal { padding: 0.5rem 1.2rem; background: var(--bg-secondary); color: var(--brand-navy); border-radius: 50px; font-weight: 600; font-size: 0.9rem; border: 1px solid var(--border-light); transition: all 0.3s ease; }
+        .btn-nav-portal:hover { background: var(--brand-navy); color: white; }
+
+        /* Dropdown */
+        .dropdown { position: relative; display: inline-block; }
+        .dropdown-content { display: none; position: absolute; background-color: white; min-width: 220px; box-shadow: var(--shadow-md); border-radius: 8px; border: 1px solid var(--border-light); z-index: 101; top: 100%; left: 0; padding: 0.5rem 0; }
+        .dropdown-content a { color: var(--text-dark); padding: 0.7rem 1.5rem; text-decoration: none; display: block; font-size: 0.95rem; font-weight: 500; transition: all 0.2s; }
+        .dropdown-content a:hover { background-color: var(--bg-secondary); color: var(--brand-ruby); }
+        .dropdown:hover .dropdown-content { display: block; }
+
+        /* --- Page Header --- */
+        .page-header { margin: 4rem 0; text-align: center; }
+        .page-header h1 { font-family: var(--font-display); font-size: clamp(2.5rem, 5vw, 3.5rem); font-weight: 800; color: var(--brand-navy); letter-spacing: -0.02em; margin-bottom: 1rem; }
+        .page-header p { font-size: 1.15rem; color: var(--text-body); font-weight: 400; max-width: 700px; margin: 0 auto; }
+
+        /* --- About Grid --- */
+        .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center; background: white; border: 1px solid var(--border-light); border-radius: 20px; padding: 4rem; box-shadow: var(--shadow-lg); margin-bottom: 4rem; }
+        
+        .about-image { width: 100%; height: auto; border-radius: 16px; box-shadow: var(--shadow-md); object-fit: cover; aspect-ratio: 4/5; }
+        
+        .about-content h2 { font-family: var(--font-display); font-size: 2.2rem; color: var(--brand-navy); margin-bottom: 0.5rem; }
+        .proadvisor-title { color: var(--brand-ruby); font-family: var(--font-display); font-size: 1.1rem; text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 1.5rem; font-weight: 600; }
+        .about-content p { color: var(--text-body); font-size: 1.1rem; margin-bottom: 1.5rem; }
+        
+        .credentials { margin-top: 2rem; padding-top: 2rem; border-top: 1px solid var(--border-light); }
+        .credentials h4 { font-family: var(--font-display); font-size: 1.2rem; color: var(--brand-navy); margin-bottom: 1rem; }
+        .credentials ul { list-style: none; }
+        .credentials li { position: relative; padding-left: 1.5rem; margin-bottom: 0.5rem; color: var(--text-dark); font-weight: 500; }
+        .credentials li::before { content: '✓'; position: absolute; left: 0; color: var(--brand-ruby); font-weight: bold; }
+
+        
+        /* --- Footer --- */
+        footer { background: white; padding: 4rem 0 2rem 0; text-align: center; border-top: 1px solid var(--border-light); }
+        .footer-logo { font-family: var(--font-logo); font-size: 1.8rem; font-weight: 800; font-style: italic; color: var(--brand-navy); margin-bottom: 1rem; }
+        .footer-links { display: flex; justify-content: center; gap: 2rem; margin-bottom: 2rem; }
+        .footer-links a { color: var(--text-body); transition: color 0.3s; }
+        .footer-links a:hover { color: var(--brand-ruby); }
+        .footer-copyright { color: var(--text-muted); font-size: 0.9rem; }
+
+
+        @media (max-width: 768px) {
+            .about-grid { grid-template-columns: 1fr; padding: 2rem; }
+            .nav-links { display: none; }
+            .badges-row { flex-wrap: wrap; }
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="container nav-container">
+            <a href="index.html" class="logo">Everett<span>Blayne</span></a>
+            <div class="nav-links">
+                <div class="dropdown">
+                    <a href="index.html#services" class="nav-link">Services ▾</a>
+                    <div class="dropdown-content">
+                        <a href="monthly-accounting.html">Startup Accounting</a>
+                        <a href="reporting.html">Reporting (P&L/Balance)</a>
+                        <a href="full-accounting.html">Full-Service Accounting</a>
+                        <a href="payroll.html">Payroll Services</a>
+                        <a href="consultations.html">Strategic Consultations</a>
+                    </div>
+                </div>
+                <a href="about.html" class="nav-link">About Firm</a>
+            </div>
+            <a href="https://calendly.com/everettbirving/30min" target="_blank" class="btn-nav-portal">Schedule Meeting</a>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="page-header">
+            <h1>About EverettBlayne</h1>
+            <p>Combining academic excellence with deep practical experience to deliver precise, strategic financial guidance.</p>
+        </div>
+
+        <div class="about-grid">
+            <div class="about-visual">
+                <!-- Placeholder for Portrait -->
+                <img src="portrait.jpg" alt="Everett Blayne Portrait" class="about-image">
+            </div>
+            <div class="about-content">
+                <h2>Everett Blayne</h2>
+                <h3 class="proadvisor-title">Principal & Founder</h3>
+                <p>I founded EverettBlayne to bridge the gap between reactive bookkeeping and proactive financial strategy. My goal is to ensure business owners have the exact data they need to make confident, aggressive growth decisions.</p>
+                <p>With a deep understanding of database structures, cost accounting, and workflow automation, I help companies not just record their history, but engineer their future.</p>
+                
+                <div class="credentials">
+                    <h4>Qualifications & Education</h4>
+                    <ul>
+                        <li>Bachelor of Science in Accounting, Utah Valley University (UVU)</li>
+                        <li>Certified QuickBooks ProAdvisor</li>
+                        <li>Advanced QuickBooks Online Payroll Certification</li>
+                        <li>Expertise in Financial Modeling & Workflow Automation</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+        <footer>
+        <div class="container">
+            <div class="footer-logo">Everett<span>Blayne</span></div>
+            <div class="footer-links">
+                <a href="index.html">Home</a>
+                <a href="monthly-accounting.html">Accounting</a>
+                <a href="payroll.html">Payroll</a>
+                <a href="consultations.html">Consultations</a>
+                <a href="about.html">About</a>
+            </div>
+            <div class="footer-copyright">
+                &copy; 2026 EverettBlayne CPAs & Business Advisors. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>

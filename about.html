@@ -8,109 +8,130 @@
       gtag('js', new Date());
       gtag('config', 'AW-18085429312');
     </script>
-    
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Firm | EverettBlayne Accounting</title>
-    
-    <!-- Google Fonts -->
+    <title>About EverettBlayne | Small Business Accounting Firm</title>
+    <meta name="description" content="Learn about EverettBlayne — a dedicated small business accounting firm offering bookkeeping, payroll, and financial strategy starting at $50/hr.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@300;400;600;800&family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,600&display=swap" rel="stylesheet">
-    
     <style>
         :root {
-            --bg-primary: #ffffff;
             --bg-secondary: #f4f6f8;
-            --bg-accent: #eef1f5;
-            
             --text-dark: #1e293b;
             --text-body: #475569;
             --text-muted: #94a3b8;
-            
             --brand-ruby: #8A1538;
             --brand-maroon: #5E0E25;
             --brand-navy: #0f172a;
-            
             --border-light: #e2e8f0;
-            
             --font-logo: 'Playfair Display', serif;
             --font-display: 'Outfit', sans-serif;
             --font-body: 'Inter', sans-serif;
-            
             --shadow-sm: 0 1px 3px rgba(0,0,0,0.05);
             --shadow-md: 0 4px 6px -1px rgba(0,0,0,0.05), 0 2px 4px -1px rgba(0,0,0,0.03);
             --shadow-lg: 0 10px 25px -3px rgba(0,0,0,0.08), 0 4px 6px -2px rgba(0,0,0,0.04);
         }
-
         * { box-sizing: border-box; margin: 0; padding: 0; }
         body { font-family: var(--font-body); background: var(--bg-secondary); color: var(--text-body); line-height: 1.7; -webkit-font-smoothing: antialiased; }
         a { text-decoration: none; color: inherit; }
-        .container { max-width: 1200px; margin: 0 auto; padding: 0 5%; }
+        .container { max-width: 960px; margin: 0 auto; padding: 0 5%; }
 
-        /* --- Navigation Bar --- */
-        nav { background: rgba(255, 255, 255, 0.95); backdrop-filter: blur(10px); position: sticky; top: 0; z-index: 100; border-bottom: 1px solid var(--border-light); padding: 1rem 0; }
-        .nav-container { display: flex; justify-content: space-between; align-items: center; }
+        /* Nav */
+        nav { background: rgba(255,255,255,0.95); backdrop-filter: blur(10px); position: sticky; top: 0; z-index: 100; border-bottom: 1px solid var(--border-light); padding: 1rem 0; }
+        .nav-container { display: flex; justify-content: space-between; align-items: center; max-width: 1200px; margin: 0 auto; padding: 0 5%; }
         .logo { font-family: var(--font-logo); font-size: 1.8rem; font-weight: 800; color: var(--brand-navy); letter-spacing: -0.01em; font-style: italic; }
         .logo span { color: var(--brand-ruby); }
         .nav-links { display: flex; gap: 2rem; align-items: center; }
-        .nav-link { font-weight: 500; color: var(--text-dark); font-size: 0.95rem; transition: color 0.3s ease; }
+        .nav-link { font-weight: 500; color: var(--text-dark); font-size: 0.95rem; transition: color 0.3s; }
         .nav-link:hover { color: var(--brand-ruby); }
-        .btn-nav-portal { padding: 0.5rem 1.2rem; background: var(--bg-secondary); color: var(--brand-navy); border-radius: 50px; font-weight: 600; font-size: 0.9rem; border: 1px solid var(--border-light); transition: all 0.3s ease; }
+        .btn-nav-portal { padding: 0.5rem 1.2rem; background: var(--bg-secondary); color: var(--brand-navy); border-radius: 50px; font-weight: 600; font-size: 0.9rem; border: 1px solid var(--border-light); transition: all 0.3s; }
         .btn-nav-portal:hover { background: var(--brand-navy); color: white; }
-
-        /* Dropdown */
         .dropdown { position: relative; display: inline-block; }
-        .dropdown-content { display: none; position: absolute; background-color: white; min-width: 220px; box-shadow: var(--shadow-md); border-radius: 8px; border: 1px solid var(--border-light); z-index: 101; top: 100%; left: 0; padding: 0.5rem 0; }
-        .dropdown-content a { color: var(--text-dark); padding: 0.7rem 1.5rem; text-decoration: none; display: block; font-size: 0.95rem; font-weight: 500; transition: all 0.2s; }
-        .dropdown-content a:hover { background-color: var(--bg-secondary); color: var(--brand-ruby); }
+        .dropdown-content { display: none; position: absolute; background: white; min-width: 220px; box-shadow: var(--shadow-md); border-radius: 8px; border: 1px solid var(--border-light); z-index: 101; top: 100%; left: 0; padding: 0.5rem 0; }
+        .dropdown-content a { color: var(--text-dark); padding: 0.7rem 1.5rem; display: block; font-size: 0.95rem; font-weight: 500; transition: all 0.2s; }
+        .dropdown-content a:hover { background: var(--bg-secondary); color: var(--brand-ruby); }
         .dropdown:hover .dropdown-content { display: block; }
+        .hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; background: none; border: none; padding: 4px; }
+        .hamburger span { display: block; width: 24px; height: 2px; background: var(--brand-navy); border-radius: 2px; transition: all 0.3s; }
+        .hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+        .hamburger.open span:nth-child(2) { opacity: 0; }
+        .hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+        .mobile-menu { display: none; position: fixed; top: 0; left: 0; right: 0; bottom: 0; background: white; z-index: 200; padding: 5rem 2rem 2rem; flex-direction: column; gap: 1.5rem; overflow-y: auto; }
+        .mobile-menu.open { display: flex; }
+        .mobile-menu-close { position: absolute; top: 1.2rem; right: 1.5rem; background: none; border: none; font-size: 1.8rem; color: var(--brand-navy); cursor: pointer; }
+        .mobile-menu a { font-size: 1.2rem; font-weight: 600; color: var(--text-dark); padding: 0.75rem 0; border-bottom: 1px solid var(--border-light); }
+        .mobile-menu a:hover { color: var(--brand-ruby); }
+        .mobile-menu .mobile-cta { margin-top: 1rem; display: inline-block; padding: 1rem 2rem; background: var(--brand-ruby); color: white; border-radius: 50px; font-weight: 600; text-align: center; }
+        .mobile-menu-label { font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.1em; color: var(--text-muted); font-weight: 600; margin-top: 0.5rem; }
 
-        /* --- Page Header --- */
-        .page-header { margin: 4rem 0; text-align: center; }
-        .page-header h1 { font-family: var(--font-display); font-size: clamp(2.5rem, 5vw, 3.5rem); font-weight: 800; color: var(--brand-navy); letter-spacing: -0.02em; margin-bottom: 1rem; }
-        .page-header p { font-size: 1.15rem; color: var(--text-body); font-weight: 400; max-width: 700px; margin: 0 auto; }
+        /* Page Hero */
+        .page-hero { background: linear-gradient(135deg, var(--brand-navy) 0%, #1e3a5f 100%); color: white; padding: 4rem 0 3rem; text-align: center; }
+        .page-hero .label { display: inline-block; background: rgba(255,255,255,0.12); color: #fca5a5; font-size: 0.8rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.1em; padding: 0.3rem 0.9rem; border-radius: 50px; margin-bottom: 1.2rem; }
+        .page-hero h1 { font-family: var(--font-display); font-size: clamp(2rem, 5vw, 3rem); font-weight: 800; margin-bottom: 1rem; letter-spacing: -0.02em; }
+        .page-hero p { font-size: 1.1rem; opacity: 0.85; max-width: 580px; margin: 0 auto; }
 
-        /* --- About Grid --- */
-        .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center; background: white; border: 1px solid var(--border-light); border-radius: 20px; padding: 4rem; box-shadow: var(--shadow-lg); margin-bottom: 4rem; }
-        
-        .about-image { width: 100%; height: auto; border-radius: 16px; box-shadow: var(--shadow-md); object-fit: cover; aspect-ratio: 4/5; }
-        
-        .about-content h2 { font-family: var(--font-display); font-size: 2.2rem; color: var(--brand-navy); margin-bottom: 0.5rem; }
-        .proadvisor-title { color: var(--brand-ruby); font-family: var(--font-display); font-size: 1.1rem; text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 1.5rem; font-weight: 600; }
-        .about-content p { color: var(--text-body); font-size: 1.1rem; margin-bottom: 1.5rem; }
-        
+        /* About section */
+        .about-section { padding: 4rem 0; }
+        .about-grid { display: grid; grid-template-columns: 380px 1fr; gap: 4rem; align-items: start; background: white; border-radius: 20px; border: 1px solid var(--border-light); padding: 3.5rem; box-shadow: var(--shadow-lg); margin-bottom: 2.5rem; }
+        .about-photo { width: 100%; border-radius: 14px; box-shadow: var(--shadow-md); object-fit: cover; aspect-ratio: 4/5; display: block; background: var(--bg-secondary); }
+        .about-photo-placeholder { width: 100%; aspect-ratio: 4/5; border-radius: 14px; background: linear-gradient(135deg, var(--brand-navy) 0%, #1e3a5f 100%); display: flex; align-items: center; justify-content: center; color: white; font-family: var(--font-display); font-size: 4rem; font-weight: 800; letter-spacing: -0.02em; font-style: italic; }
+        .about-content h2 { font-family: var(--font-display); font-size: 2rem; color: var(--brand-navy); margin-bottom: 0.3rem; }
+        .about-title { color: var(--brand-ruby); font-size: 0.85rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.12em; margin-bottom: 1.5rem; display: block; }
+        .about-content p { font-size: 1.02rem; margin-bottom: 1.25rem; color: var(--text-body); }
         .credentials { margin-top: 2rem; padding-top: 2rem; border-top: 1px solid var(--border-light); }
-        .credentials h4 { font-family: var(--font-display); font-size: 1.2rem; color: var(--brand-navy); margin-bottom: 1rem; }
-        .credentials ul { list-style: none; }
-        .credentials li { position: relative; padding-left: 1.5rem; margin-bottom: 0.5rem; color: var(--text-dark); font-weight: 500; }
-        .credentials li::before { content: '✓'; position: absolute; left: 0; color: var(--brand-ruby); font-weight: bold; }
+        .credentials h4 { font-family: var(--font-display); font-size: 1rem; color: var(--brand-navy); margin-bottom: 1rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; }
+        .credentials ul { list-style: none; display: flex; flex-direction: column; gap: 0.55rem; }
+        .credentials li { position: relative; padding-left: 1.5rem; color: var(--text-dark); font-weight: 500; font-size: 0.97rem; }
+        .credentials li::before { content: '✓'; position: absolute; left: 0; color: var(--brand-ruby); font-weight: 700; }
 
-        
-        /* --- Footer --- */
-        footer { background: white; padding: 4rem 0 2rem 0; text-align: center; border-top: 1px solid var(--border-light); }
+        /* Values grid */
+        .values-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; margin-bottom: 2.5rem; }
+        .value-card { background: white; border: 1px solid var(--border-light); border-radius: 14px; padding: 2rem; box-shadow: var(--shadow-sm); }
+        .value-icon { width: 44px; height: 44px; background: linear-gradient(135deg, var(--brand-ruby), var(--brand-maroon)); border-radius: 10px; display: flex; align-items: center; justify-content: center; margin-bottom: 1rem; }
+        .value-icon svg { color: white; }
+        .value-card h3 { font-family: var(--font-display); font-size: 1.1rem; color: var(--brand-navy); margin-bottom: 0.5rem; }
+        .value-card p { font-size: 0.92rem; color: var(--text-body); line-height: 1.6; }
+
+        /* CTA box */
+        .about-cta { background: var(--brand-navy); color: white; border-radius: 20px; padding: 3rem; text-align: center; margin-bottom: 4rem; }
+        .about-cta h2 { font-family: var(--font-display); font-size: 1.9rem; margin-bottom: 0.75rem; }
+        .about-cta p { opacity: 0.8; max-width: 520px; margin: 0 auto 2rem; font-size: 1rem; }
+        .cta-buttons { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
+        .btn-primary { display: inline-flex; align-items: center; justify-content: center; padding: 0.9rem 2.2rem; background: var(--brand-ruby); color: white; font-family: var(--font-body); font-weight: 700; font-size: 1rem; border-radius: 50px; border: none; transition: all 0.3s; cursor: pointer; }
+        .btn-primary:hover { background: var(--brand-maroon); transform: translateY(-2px); }
+        .btn-outline { display: inline-flex; align-items: center; justify-content: center; padding: 0.9rem 2.2rem; background: transparent; color: white; font-weight: 600; font-size: 1rem; border-radius: 50px; border: 2px solid rgba(255,255,255,0.4); transition: all 0.3s; }
+        .btn-outline:hover { border-color: white; background: rgba(255,255,255,0.08); }
+
+        /* Footer */
+        footer { background: white; padding: 3rem 0 2rem; border-top: 1px solid var(--border-light); text-align: center; }
         .footer-logo { font-family: var(--font-logo); font-size: 1.8rem; font-weight: 800; font-style: italic; color: var(--brand-navy); margin-bottom: 1rem; }
-        .footer-links { display: flex; justify-content: center; gap: 2rem; margin-bottom: 2rem; }
-        .footer-links a { color: var(--text-body); transition: color 0.3s; }
+        .footer-logo span { color: var(--brand-ruby); }
+        .footer-links { display: flex; justify-content: center; gap: 2rem; margin-bottom: 2rem; flex-wrap: wrap; }
+        .footer-links a { color: var(--text-body); font-size: 0.92rem; transition: color 0.3s; }
         .footer-links a:hover { color: var(--brand-ruby); }
-        .footer-copyright { color: var(--text-muted); font-size: 0.9rem; }
-
+        .footer-copyright { color: var(--text-muted); font-size: 0.85rem; }
 
         @media (max-width: 768px) {
-            .about-grid { grid-template-columns: 1fr; padding: 2rem; }
             .nav-links { display: none; }
-            .badges-row { flex-wrap: wrap; }
+            .hamburger { display: flex; }
+            .about-grid { grid-template-columns: 1fr; padding: 2rem; gap: 2rem; }
+            .values-grid { grid-template-columns: 1fr; }
+            .page-hero { padding: 3rem 0 2rem; }
+            .about-cta { padding: 2rem; }
+            .cta-buttons { flex-direction: column; align-items: center; }
         }
     </style>
 </head>
 <body>
 
+    <!-- Navigation -->
     <nav>
-        <div class="container nav-container">
+        <div class="nav-container">
             <a href="index.html" class="logo">Everett<span>Blayne</span></a>
             <div class="nav-links">
                 <div class="dropdown">
-                    <a href="index.html#services" class="nav-link">Services ▾</a>
+                    <a href="index.html#services" class="nav-link">Services &#9660;</a>
                     <div class="dropdown-content">
                         <a href="monthly-accounting.html">Startup Accounting</a>
                         <a href="bookkeeping.html">Bookkeeping</a>
@@ -121,43 +142,136 @@
                 </div>
                 <a href="about.html" class="nav-link">About Firm</a>
             </div>
-            <a href="https://calendly.com/everettbirving/30min" target="_blank" class="btn-nav-portal" onclick="gtag(\'event\', \'schedule_meeting\', {\'event_category\': \'engagement\'});">Schedule Meeting</a>
+            <a href="https://calendly.com/everettbirving/30min" target="_blank" class="btn-nav-portal" onclick="gtag('event','schedule_meeting',{'event_category':'engagement'});">Schedule Meeting</a>
+            <button class="hamburger" id="hamburgerBtn" aria-label="Open menu"><span></span><span></span><span></span></button>
         </div>
     </nav>
 
-    <div class="container">
-        <div class="page-header">
-            <h1>About EverettBlayne</h1>
-            <p>Combining academic excellence with deep practical experience to deliver precise, strategic financial guidance.</p>
-        </div>
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+        <button class="mobile-menu-close" id="mobileClose">&#x2715;</button>
+        <span class="mobile-menu-label">Services</span>
+        <a href="monthly-accounting.html">Startup Accounting</a>
+        <a href="bookkeeping.html">Bookkeeping</a>
+        <a href="full-accounting.html">Full-Service Accounting</a>
+        <a href="payroll.html">Payroll Services</a>
+        <a href="consultations.html">Strategic Consultations</a>
+        <span class="mobile-menu-label">Company</span>
+        <a href="about.html">About Firm</a>
+        <a href="https://calendly.com/everettbirving/30min" target="_blank" class="mobile-cta">Book a Free Consultation &rarr;</a>
+    </div>
 
-        <div class="about-grid" style="grid-template-columns: 1fr; max-width: 800px; margin-left: auto; margin-right: auto; text-align: center;">
-            <div class="about-content">
-                <h2>Our Firm</h2>
-                <h3 class="proadvisor-title">Strategic Financial Partners</h3>
-                <p>EverettBlayne was founded to bridge the gap between reactive bookkeeping and proactive financial strategy. Our goal is to ensure business owners have the exact data they need to make confident, aggressive growth decisions.</p>
-                <p>With a deep understanding of database structures, cost accounting, and workflow automation, we help companies not just record their history, but engineer their future.</p>
-                
-
-            </div>
+    <!-- Hero -->
+    <div class="page-hero">
+        <div class="container">
+            <span class="label">About the Firm</span>
+            <h1>Real Accounting.<br>Built for Small Businesses.</h1>
+            <p>No bloated retainers, no corporate runaround. Just accurate books, responsive service, and financial clarity that actually moves your business forward.</p>
         </div>
     </div>
 
-        <footer>
+    <!-- About Section -->
+    <div class="about-section">
+        <div class="container">
+
+            <!-- Bio Grid -->
+            <div class="about-grid">
+                <div>
+                    <img src="portrait.jpg" alt="EverettBlayne — Founder" class="about-photo" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                    <div class="about-photo-placeholder" style="display:none;">EB</div>
+                </div>
+                <div class="about-content">
+                    <h2>EverettBlayne</h2>
+                    <span class="about-title">Founder &mdash; QuickBooks ProAdvisor</span>
+                    <p>EverettBlayne was founded on a straightforward idea: small business owners deserve the same quality of financial oversight that big companies get &mdash; without the overhead, the contracts, or the runaround.</p>
+                    <p>We specialize in working with businesses that are growing, messy, or starting from scratch. Whether your books haven't been touched in months or you've never set up QuickBooks, we've seen it before and we know how to fix it fast.</p>
+                    <p>Our background spans bookkeeping, full-service accounting, payroll compliance, and custom financial systems &mdash; including workflow automation, database design, and cost accounting. We don't just record your numbers; we help you understand and act on them.</p>
+
+                    <div class="credentials">
+                        <h4>Credentials &amp; Expertise</h4>
+                        <ul>
+                            <li>QuickBooks Online ProAdvisor Certified</li>
+                            <li>Payroll tax compliance &mdash; federal, state &amp; local</li>
+                            <li>Full AP/AR management &amp; invoicing systems</li>
+                            <li>Job order costing &amp; cost accounting systems</li>
+                            <li>VBA &amp; Python workflow automation</li>
+                            <li>SQL database design &amp; financial reporting</li>
+                            <li>Cash flow forecasting &amp; budget variance analysis</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Values -->
+            <div class="values-grid">
+                <div class="value-card">
+                    <div class="value-icon">
+                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 11 12 14 22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
+                    </div>
+                    <h3>No Surprises Pricing</h3>
+                    <p>You'll always know what you're paying before we start. Hourly or flat-rate &mdash; spelled out clearly, no hidden fees.</p>
+                </div>
+                <div class="value-card">
+                    <div class="value-icon">
+                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                    </div>
+                    <h3>Fast Response</h3>
+                    <p>Every inquiry gets a reply within 1 business day. When something is urgent, we treat it that way.</p>
+                </div>
+                <div class="value-card">
+                    <div class="value-icon">
+                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="m19 9-5 5-4-4-3 3"/></svg>
+                    </div>
+                    <h3>Growth-Oriented</h3>
+                    <p>We scale with you. Start with hourly help, grow into a full-service engagement &mdash; no pressure, just what fits your stage.</p>
+                </div>
+            </div>
+
+            <!-- CTA -->
+            <div class="about-cta">
+                <h2>Ready to Work Together?</h2>
+                <p>Book a free 30-minute call or send us a quick note &mdash; we'll figure out what you need and give you a straight answer on whether we're the right fit.</p>
+                <div class="cta-buttons">
+                    <a href="https://calendly.com/everettbirving/30min" target="_blank" class="btn-primary" onclick="gtag('event','schedule_meeting',{'event_category':'engagement'});">Book a Free 30-Min Call</a>
+                    <a href="index.html#contact" class="btn-outline">Get a Quick Quote</a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
         <div class="container">
             <div class="footer-logo">Everett<span>Blayne</span></div>
             <div class="footer-links">
                 <a href="index.html">Home</a>
-                <a href="monthly-accounting.html">Accounting</a>
+                <a href="monthly-accounting.html">Startup Accounting</a>
+                <a href="bookkeeping.html">Bookkeeping</a>
+                <a href="full-accounting.html">Full-Service</a>
                 <a href="payroll.html">Payroll</a>
                 <a href="consultations.html">Consultations</a>
                 <a href="about.html">About</a>
             </div>
-            <div class="footer-copyright">
-                &copy; 2026 EverettBlayne Accounting. All rights reserved.
-            </div>
+            <div class="footer-copyright">&copy; 2026 EverettBlayne Accounting. All rights reserved.</div>
         </div>
     </footer>
+
+    <script>
+        const hamburgerBtn = document.getElementById('hamburgerBtn');
+        const mobileMenu = document.getElementById('mobileMenu');
+        const mobileClose = document.getElementById('mobileClose');
+        hamburgerBtn.addEventListener('click', function() {
+            this.classList.toggle('open');
+            mobileMenu.classList.toggle('open');
+            document.body.style.overflow = mobileMenu.classList.contains('open') ? 'hidden' : '';
+        });
+        mobileClose.addEventListener('click', function() {
+            hamburgerBtn.classList.remove('open');
+            mobileMenu.classList.remove('open');
+            document.body.style.overflow = '';
+        });
+    </script>
 
 </body>
 </html>
